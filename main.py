@@ -102,7 +102,7 @@ else:
     nb_not_found = 0
     with open('urls.json', 'r') as file:
 
-        data = json.load(file)['data']
+        data = json.load(file)
         nb_urls = sum(len(item['urls']) for item in data)
         print("Number of images : ", nb_urls)
 
