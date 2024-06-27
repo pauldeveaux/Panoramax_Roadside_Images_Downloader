@@ -92,6 +92,7 @@ def download_image(url, yaw=180, pitch=90, download=True):
 
 
 if test_mode:
+    print("------------ Test mode ------------")
     url = args.test_url
     yaw = int(args.test_yaw)
     pitch = int(args.test_pitch)
@@ -100,7 +101,7 @@ if test_mode:
     img.show()
 else:
     nb_not_found = 0
-    with open('urls.json', 'r') as file:
+    with open('urls_1.json', 'r') as file:
 
         data = json.load(file)
         nb_urls = sum(len(item['urls']) for item in data)
